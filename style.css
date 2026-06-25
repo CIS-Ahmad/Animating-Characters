@@ -1,0 +1,34 @@
+#big {
+  margin: 10px;
+  height: 100%;
+  background-color: aqua;
+}
+
+#small {
+  font-size: 170px;
+  line-height: 200px;
+  margin: 20px;
+  color: gray;
+}
+
+.Char {
+  animation-name: animation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+@keyframes animation {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
