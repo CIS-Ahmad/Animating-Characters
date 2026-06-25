@@ -96,11 +96,10 @@ document.addEventListener("DOMContentLoaded", () => {
         splitNode(Node);
     }
 
-
-
     setInterval(() => {
         Display();
     }, 3000);
+
     Display();
 
 });
