@@ -67,6 +67,12 @@ function splitNode(Node) {
 
 }
 
+function addElemnteToParag() {
+    for (let char of Chars) {
+        parag.appendChild(char);
+    }
+}
+
 function colorizeChars() {
 
     for (const char of Chars) {
@@ -89,13 +95,11 @@ document.addEventListener("DOMContentLoaded", () => {
     for (const Node of ORIGINAL_NODES) {
         splitNode(Node);
     }
+    addElemnteToParag();
 
     setInterval(() => {
         Display();
     }, 3000);
-
-    Display();
-
 });
 
 
