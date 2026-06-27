@@ -11,6 +11,7 @@
 //5.display chars
 
 
+
 function getEleUsingID(ID) {
     return document.getElementById(ID);
 }
@@ -47,6 +48,9 @@ function getRandomColor() {
 let Chars = [];
 const parag = getEleUsingID("small");
 const background = getEleUsingID("big");
+const ORIGINAL_NODES = [...parag.childNodes];
+
+
 
 function splitNode(Node) {
 
@@ -67,32 +71,22 @@ function colorizeChars() {
 
     for (const char of Chars) {
 
-        if (char.tagName = "SPAN") {
-            char.style.color = getRandomColor();
-        }
+        char.style.color = getRandomColor();
+
     }
     background.style.backgroundColor = getRandomColor();
 }
 
 function Display() {
-    parag.innerHTML = "";
 
     colorizeChars();
-
-    for (const ele of Chars) {
-        parag.appendChild(ele);
-
-    }
-
-    parag.textContent = text;
-
 }
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    for (const Node of parag.childNodes) {
+    parag.innerHTML = "";
+
+    for (const Node of ORIGINAL_NODES) {
         splitNode(Node);
     }
 
